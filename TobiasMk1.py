@@ -118,31 +118,15 @@ def topNews_():
 		speak("published by " + news[1])
 
 def setAlarm_():
-	speak("what time do you want your alarm to be set")
-	q = takeCommand()
-	for x in q:
+	for x in query: #gets hour of alarm
 		if x.isdigit():
 			hour = x
-
-	hour = int(hour)
-	if "a.m." in q or "morning" in q:
-		speak("adding" + str(hour) + "a m alarm")
-		alarms.append(hour)
-	elif "p.m." in q or "afternoon" in q or "night" in q:
-		newHour = hour + 12
-		speak("adding" + str(hour) + "p m alarm")
-		alarms.append(newHour)
-
-def setAlarmOne_():
-	
-	for x in query: #gets hour of alarm
-		hour = x 
 	hour = int(hour) #makes it a int
 
-	if "a.m." in q or "morning" in q:
+	if "a.m." in query or "morning" in query:
 		speak("adding" + str(hour) + "a m alarm")
 		alarms.append(hour)
-	elif "p.m." in q or "afternoon" in q or "night" in q:
+	elif "p.m." in query or "afternoon" in query or "night" in query:
 		newHour = hour + 12
 		speak("adding" + str(hour) + "p m alarm")
 		alarms.append(newHour)
@@ -258,13 +242,13 @@ if __name__ == '__main__':
 		if 'tobias' in query and 'battery' in query:
 			battery_()
 
-		if 'tobias' in query and 'set alarm' in query:
+		if 'tobias' in query and 'set' in query and 'alarm' in query:
 			setAlarm_()
 
 		if 'tobias' in query and 'delete' in query and 'alarm' in query:
 			deleteAlarm_()
 
-		if 'tobias' in query and 'view alarm' in query:
+		if 'tobias' in query and 'my alarms' in query:
 			viewAlarms_()
 
 		if 'tobias' in query and 'turn off' in query or 'power off' in query or 'exit' in query or 'quit' in query:
