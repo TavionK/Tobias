@@ -132,22 +132,22 @@ def setAlarm_():
 		alarms.append(newHour)
 	
 
-# def deleteAlarm_():
-# 	counter = 0
-# 	for x in alarms:
-# 		if x > 12:
-# 			res = x -12
-# 			speak('do you want to delete your' + str(res) + "p m alarm?")
-# 			ip = takeCommand().lower()
-# 			if ip = 'yes':
-# 				alarms.remove(counter)
-# 			counter += 1
-# 		else:
-# 			speak('do you want to delete your' + str(x) + "a m alarm?")
-# 			ip = takeCommand().lower()
-# 			if ip = 'yes':
-# 				alarms.remove(counter)
-# 			counter += 1
+def deleteAlarm_():
+	counter = 0
+	for x in alarms:
+		if x > 12:
+			res = x -12
+			speak('do you want to delete your' + str(res) + "p m alarm?")
+			ip = takeCommand().lower()
+			if ip == 'yes':
+				alarms.pop(counter)
+			counter += 1
+		else:
+			speak('do you want to delete your' + str(x) + "a m alarm?")
+			ip = takeCommand().lower()
+			if ip == 'yes':
+				alarms.pop(counter)
+			counter += 1
 
 def viewAlarms_():
 	speak("you have " + str(len(alarms)) + "alarms")
