@@ -5,6 +5,9 @@ import wikipedia #pip install wikipedia
 import requests #pip install requests
 import smtplib #pip intall smtplib
 import psutil #pip install psutil
+import webbrowser #pip install webbrowser
+import bs4 #pip install webbrowser
+import sys #pip install sys
 engine = pyttsx3.init()
 
 def speak(audio):
@@ -116,6 +119,23 @@ def topNews_():
 		speak(str(i+1))
 		speak(news[0])
 		speak("published by " + news[1])
+
+def math_():
+	numbers = []
+	for x in query: #loop through to get number
+		if x.isdigit():
+			num1 = x
+			num1 = int(num1)
+			numbers.append (num1)
+	num1 = numbers[0]
+	num2 = numbers[1]
+	if "plus" in query:
+		ans = num1 + num2
+		speak(num1 + " plus " + num2 + " equals " + ans)
+	elif "minus" in query:
+		ans = num1 - num2
+		speak(num1 + " minus " + num2 + " equals " + ans)
+
 
 def setAlarm_():
 	for x in query: #gets hour of alarm
@@ -250,6 +270,9 @@ if __name__ == '__main__':
 
 		if 'tobias' in query and 'my alarms' in query:
 			viewAlarms_()
+
+		if 'tobias' in query and 'minus' in query or 'plus' in query:
+			math_()
 
 		if 'tobias' in query and 'turn off' in query or 'power off' in query or 'exit' in query or 'quit' in query:
 			quit_()
