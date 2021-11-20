@@ -129,12 +129,13 @@ def math_():
 			numbers.append (num1)
 	num1 = numbers[0]
 	num2 = numbers[1]
-	if "plus" in query:
+	if "+" in query:
 		ans = num1 + num2
-		speak(num1 + " plus " + num2 + " equals " + ans)
-	elif "minus" in query:
+		speak(str(num1) + " plus " + str(num2) + " equals " + str(ans))
+	
+	elif "-" in query:
 		ans = num1 - num2
-		speak(num1 + " minus " + num2 + " equals " + ans)
+		speak(str(num1) + " minus " + str(num2) + " equals " + str(ans))
 
 
 def setAlarm_():
@@ -207,10 +208,8 @@ def takeCommand():
 		return "None"
 	return query
 
-#___________________________________________________________________________________________________________________
 
 if __name__ == '__main__':
-	
 	wishme()
 	alarms = []
 	while True:
@@ -271,7 +270,7 @@ if __name__ == '__main__':
 		if 'tobias' in query and 'my alarms' in query:
 			viewAlarms_()
 
-		if 'tobias' in query and 'minus' in query or 'plus' in query:
+		if 'tobias' in query and 'minus' in query or 'plus' in query or '+' in query or '-' in query:
 			math_()
 
 		if 'tobias' in query and 'turn off' in query or 'power off' in query or 'exit' in query or 'quit' in query:
