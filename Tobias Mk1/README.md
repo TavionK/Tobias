@@ -1,6 +1,3 @@
-# Tobias Mk1
-
-
 # *Tobias Mk1*
 
 [GitHub - TavionK/Tobias-Mk1: First version of my personal assistant](https://github.com/TavionK/Tobias-Mk1)
