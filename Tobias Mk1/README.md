@@ -1,9 +1,5 @@
 # Tobias Mk1
 
-Category: Personal
-Date Created: November 7, 2021 9:45 PM
-Status: In progress
-Type: Coding, Project, Tobias
 
 # *Tobias Mk1*
 
