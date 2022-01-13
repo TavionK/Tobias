@@ -88,7 +88,7 @@ def localWeather_():
 	data=res.json()
 	temp=data['main']['temp']
 	speak("The weather in Fredericksburg is")
-	speak(temp)
+	speak(str(temp))
 
 def news_():
 	speak("what news do you want to hear about?")
@@ -267,7 +267,7 @@ if __name__ == '__main__':
 		if 'tobias' in query and 'delete' in query and 'alarm' in query:
 			deleteAlarm_()
 
-		if 'tobias' in query and 'my alarms' in query:
+		if 'tobias' in query and 'my alarms' in query and 'view alarms' in query:
 			viewAlarms_()
 
 		if 'tobias' in query and 'minus' in query or 'plus' in query or '+' in query or '-' in query:
