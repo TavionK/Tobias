@@ -89,7 +89,7 @@ def localWeather_():
 	temp=data['main']['temp']
 	speak("The weather in Fredericksburg is")
 	speak(str(temp))
-
+	
 def news_():
 	speak("what news do you want to hear about?")
 	idea= takeCommand().lower()
